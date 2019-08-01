@@ -6,37 +6,34 @@ import { AppComponent } from './app.component';
 
 
 // Add material dependencies
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {NoopAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
-import { HeaderComponent } from './shared/components/header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { OrdersComponent } from './orders/orders.component';
-import { CollectionsComponent } from './collections/collections.component';
-import { AppInputComponent } from './shared/components/app-input/app-input.component';
-import { AppCheckboxComponent } from './shared/components/app-checkbox/app-checkbox.component';
-import { AppTableComponent } from './shared/components/app-table/app-table.component';
+
+
+// Application modules
+import { SharedModule } from './shared/shared.module';
+import { DashboardModule } from './dashboard/dashboard.module';
+import { CollectionsModule } from './collections/collections.module';
+import { OrdersModule } from './orders/orders.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    DashboardComponent,
-    OrdersComponent,
-    CollectionsComponent,
-    AppInputComponent,
-    AppCheckboxComponent,
-    AppTableComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    SharedModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
-    HttpClientModule
+    HttpClientModule,
+    DashboardModule,
+    OrdersModule,
+    CollectionsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
