@@ -9,12 +9,25 @@ import { AppComponent } from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule} from '@angular/material';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { OrdersComponent } from './orders/orders.component';
+import { CollectionsComponent } from './collections/collections.component';
+import { AppInputComponent } from './shared/components/app-input/app-input.component';
+import { AppCheckboxComponent } from './shared/components/app-checkbox/app-checkbox.component';
+import { AppTableComponent } from './shared/components/app-table/app-table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    DashboardComponent,
+    OrdersComponent,
+    CollectionsComponent,
+    AppInputComponent,
+    AppCheckboxComponent,
+    AppTableComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +35,8 @@ import { HeaderComponent } from './header/header.component';
     BrowserAnimationsModule,
     NoopAnimationsModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
