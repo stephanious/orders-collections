@@ -6,7 +6,9 @@ import { AppInputComponent } from './components/app-input/app-input.component';
 import { AppCheckboxComponent } from './components/app-checkbox/app-checkbox.component';
 import { AppHeaderComponent } from './components/app-header/app-header.component';
 
-
+// Add material dependencies
+import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -17,14 +19,21 @@ import { AppHeaderComponent } from './components/app-header/app-header.component
     AppCheckboxComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatSidenavModule
   ],
   exports: [
     AppHeaderComponent,
     AppSidebarComponent,
     AppTableComponent,
     AppInputComponent,
-    AppCheckboxComponent
+    AppCheckboxComponent,
+    CommonModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatSidenavModule
   ]
 })
 export class SharedModule { }
