@@ -1,1 +1,6 @@
-<p>Search component here</p>
+
+<form [formGroup]="searchForm">
+  <app-input name="search" formControlName="search"></app-input>
+</form>
+
+<pre>{{ searchForm.value | json }}</pre>

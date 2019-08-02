@@ -9,6 +9,7 @@ import { AppHeaderComponent } from './components/app-header/app-header.component
 // Add material dependencies
 import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     CommonModule,
     MatButtonModule,
     MatCheckboxModule,
-    MatSidenavModule
+    MatSidenavModule,
+    ReactiveFormsModule
   ],
   exports: [
     AppHeaderComponent,
@@ -33,7 +35,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     CommonModule,
     MatButtonModule,
     MatCheckboxModule,
-    MatSidenavModule
+    MatSidenavModule,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }
