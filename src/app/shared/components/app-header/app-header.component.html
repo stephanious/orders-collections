@@ -1,6 +1,15 @@
-
 <form [formGroup]="searchForm">
   <app-input name="search" formControlName="search"></app-input>
+  <mat-toolbar class="mat-toolbar-wrapper">
+    <div class="mat-icon-bell float-left">My App</div><br>
+    <div class="mat-icon-bell float-right">
+      <a ><mat-icon svgIcon="bell-icon" aria-hidden="false" ></mat-icon></a>
+    </div>  
+  
+</mat-toolbar>
 </form>
 
-<pre>{{ searchForm.value | json }}</pre>
+<!-- <pre>{{ searchForm.value | json }}</pre> -->
+
+
+
