@@ -1,1 +1,7 @@
-<input name="{{name}}" (change)="propagateChange()"/>
+<mat-icon class="search-icon-input" svgIcon="search" aria-hidden="false" aria-label=""></mat-icon>
+<input 
+  class="input-search-internal" 
+  name="{{name}}" 
+  (change)="propagateChange()"
+  placeholder="Search for customer #, name invoice #"
+/>
