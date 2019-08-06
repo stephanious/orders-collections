@@ -1,5 +1,7 @@
 import { Component, Input, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import {DomSanitizer} from '@angular/platform-browser';
+import {MatIconRegistry} from '@angular/material/icon';
 
 @Component({
   selector: 'app-input',
@@ -18,27 +20,33 @@ export class AppInputComponent implements ControlValueAccessor {
   @Input() value ?= '';
   @Input() name ?= '';
 
-  constructor() {}
+  constructor(iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+    iconRegistry.addSvgIcon(
+      'search',
+      sanitizer.bypassSecurityTrustResourceUrl('../../../../assets/img/icons/search-icon.svg'));
+  }
+  
+  
 
   get inputValue() {
-    debugger
+    //debugger
 
     return this.value;
   }
 
   set inputValue(value) {
-    debugger
+    //debugger
     this.value = value;
     this.propagateChange(this.value);
   }
 
   propagateChange = (_: any) => {
-    debugger
+    //debugger
 
   };
 
   writeValue(value: any) {
-    debugger
+    //debugger
 
     if (value !== undefined) {
       this.value = value;
@@ -46,13 +54,13 @@ export class AppInputComponent implements ControlValueAccessor {
   }
 
   registerOnChange(fn) {
-    debugger
+    //debugger
 
     this.propagateChange = fn;
   }
 
   registerOnTouched() {
-    debugger
+    //debugger
 
   }
 }

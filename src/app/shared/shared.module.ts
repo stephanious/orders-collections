@@ -7,12 +7,15 @@ import { AppCheckboxComponent } from './components/app-checkbox/app-checkbox.com
 import { AppHeaderComponent } from './components/app-header/app-header.component';
 
 // Add material dependencies
-import { MatButtonModule, MatCheckboxModule, MatIconModule, MatToolbarModule } from '@angular/material';
-
-import { MatSidenavModule } from '@angular/material/sidenav';
-
+import { 
+  MatButtonModule, 
+  MatCheckboxModule, 
+  MatIconModule, 
+  MatToolbarModule, 
+  MatCardModule, 
+  MatSidenavModule
+} from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
-
 import { RouterModule } from '@angular/router';
 
 
@@ -32,8 +35,8 @@ import { RouterModule } from '@angular/router';
     ReactiveFormsModule,
     RouterModule,
     MatIconModule,
-    MatToolbarModule
-
+    MatToolbarModule,
+    MatCardModule
   ],
   exports: [
     AppHeaderComponent,
@@ -48,8 +51,8 @@ import { RouterModule } from '@angular/router';
     ReactiveFormsModule,
     MatSidenavModule, 
     MatIconModule,
-    MatToolbarModule
-
+    MatToolbarModule,
+    MatCardModule
   ]
 })
 export class SharedModule { }
