@@ -2,10 +2,17 @@
   <mat-sidenav mode="side" opened class="mat-sidenav">
     <app-sidebar></app-sidebar>
   </mat-sidenav>
-  <mat-sidenav-content class="sidenav-content-container">
+  <mat-sidenav-content>
     <app-header></app-header>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
+    <div class="sidenav-content-container" layout="row">
+      <div class="flex-70" flex="70">
+        <router-outlet></router-outlet>
+      </div>
+      <div class="flex-20" flex="20">
+          <app-right-sidebar></app-right-sidebar>
+      </div>
+    </div>
+   </mat-sidenav-content>
 </mat-sidenav-container>
 
 
