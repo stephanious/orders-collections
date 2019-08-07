@@ -6,6 +6,7 @@ import { AppInputComponent } from './components/app-input/app-input.component';
 import { AppCheckboxComponent } from './components/app-checkbox/app-checkbox.component';
 import { AppHeaderComponent } from './components/app-header/app-header.component';
 
+
 // Add material dependencies
 import { 
   MatButtonModule, 
@@ -17,6 +18,7 @@ import {
 } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { AppRightSidebarComponent } from './components/app-right-sidebar/app-right-sidebar.component';
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import { RouterModule } from '@angular/router';
     AppSidebarComponent,
     AppTableComponent,
     AppInputComponent,
-    AppCheckboxComponent
+    AppCheckboxComponent,
+    AppRightSidebarComponent
   ],
   imports: [
     CommonModule,
@@ -52,7 +55,8 @@ import { RouterModule } from '@angular/router';
     MatSidenavModule, 
     MatIconModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule, 
+    AppRightSidebarComponent
   ]
 })
 export class SharedModule { }

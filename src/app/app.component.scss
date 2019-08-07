@@ -10,3 +10,22 @@
 .mat-sidenav {
   background-color: lightgray
 }
+
+.sidenav-content-container {
+  display: flex;
+  height: 100%;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.flex-20 {
+  background-color: lightgray;
+  width: 3%;
+  border-left: 1px solid grey;
+  border-top: 1px solid grey;
+}
+.flex-70 {
+  background-color: white;
+  width: 97%;
+  border-top: 1px solid grey;
+}
