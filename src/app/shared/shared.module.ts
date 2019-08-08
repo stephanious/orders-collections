@@ -14,11 +14,18 @@ import {
   MatIconModule, 
   MatToolbarModule, 
   MatCardModule, 
-  MatSidenavModule
+  MatSidenavModule,
+  MatExpansionModule,
+  MatDividerModule,
+  MatListModule,
+  MatDialogModule
 } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppRightSidebarComponent } from './components/app-right-sidebar/app-right-sidebar.component';
+import { AppSidebarDraftComponent } from './components/app-sidebar-draft/app-sidebar-draft.component';
+import { AppSidebarPendingDraftComponent } from './components/app-sidebar-pending-draft/app-sidebar-pending-draft.component';
+
 
 
 @NgModule({
@@ -28,18 +35,24 @@ import { AppRightSidebarComponent } from './components/app-right-sidebar/app-rig
     AppTableComponent,
     AppInputComponent,
     AppCheckboxComponent,
-    AppRightSidebarComponent
-  ],
+    AppRightSidebarComponent,
+    AppSidebarDraftComponent,
+    AppSidebarPendingDraftComponent,
+   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
+    RouterModule,
     MatButtonModule,
     MatCheckboxModule,
     MatSidenavModule,
-    ReactiveFormsModule,
-    RouterModule,
     MatIconModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    MatExpansionModule,
+    MatDividerModule,
+    MatListModule,
+    MatDialogModule
   ],
   exports: [
     AppHeaderComponent,
@@ -47,6 +60,7 @@ import { AppRightSidebarComponent } from './components/app-right-sidebar/app-rig
     AppTableComponent,
     AppInputComponent,
     AppCheckboxComponent,
+    AppRightSidebarComponent,
     CommonModule,
     MatButtonModule,
     MatCheckboxModule,
@@ -56,7 +70,10 @@ import { AppRightSidebarComponent } from './components/app-right-sidebar/app-rig
     MatIconModule,
     MatToolbarModule,
     MatCardModule, 
-    AppRightSidebarComponent
+    MatExpansionModule,
+    MatDividerModule,
+    MatListModule,
+    MatDialogModule
   ]
 })
 export class SharedModule { }

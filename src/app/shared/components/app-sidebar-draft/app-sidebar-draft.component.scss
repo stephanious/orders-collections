@@ -1,0 +1,35 @@
+.draft-pending {
+  border-radius: 0;
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  box-shadow: none;
+  border-bottom: 1px solid black;
+}
+
+.draft-pending * {
+  font-size: 12px;
+  display: inline-grid;
+  margin: 0 0 0 5px;
+  color: grey
+}
+
+.dialog-draft {
+  border: 1px solid black;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: inline-grid !important;
+  position: absolute;
+  
+  margin: 25px 0px 0 -25px !important;
+  z-index: 1 !important;
+  background-color: white;
+}
+
+.dialog-draft * {}
