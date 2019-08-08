@@ -8,17 +8,18 @@ import { AppHeaderComponent } from './components/app-header/app-header.component
 
 
 // Add material dependencies
-import { 
-  MatButtonModule, 
-  MatCheckboxModule, 
-  MatIconModule, 
-  MatToolbarModule, 
-  MatCardModule, 
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatIconModule,
+  MatToolbarModule,
+  MatCardModule,
   MatSidenavModule
 } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppRightSidebarComponent } from './components/app-right-sidebar/app-right-sidebar.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { AppRightSidebarComponent } from './components/app-right-sidebar/app-rig
     AppTableComponent,
     AppInputComponent,
     AppCheckboxComponent,
-    AppRightSidebarComponent
+    AppRightSidebarComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,
@@ -52,10 +54,10 @@ import { AppRightSidebarComponent } from './components/app-right-sidebar/app-rig
     MatCheckboxModule,
     MatSidenavModule,
     ReactiveFormsModule,
-    MatSidenavModule, 
+    MatSidenavModule,
     MatIconModule,
     MatToolbarModule,
-    MatCardModule, 
+    MatCardModule,
     AppRightSidebarComponent
   ]
 })
