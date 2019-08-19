@@ -15,10 +15,13 @@ import { SharedModule } from './shared/shared.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { CollectionsModule } from './collections/collections.module';
 import { OrdersModule } from './orders/orders.module';
+import { SignInComponent } from './auth/sign-in/sign-in.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ import { OrdersModule } from './orders/orders.module';
     DashboardModule,
     OrdersModule,
     CollectionsModule,
-    CoreModule
+    CoreModule,
+    FormsModule
   ],
   exports: [],
   providers: [],
