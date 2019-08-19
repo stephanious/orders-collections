@@ -1,0 +1,16 @@
+.draft-pending {
+  border-radius: 0;
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  box-shadow: none;
+  border: 1px solid black;
+}
+
+.draft-pending * {
+  font-size: 16px;
+  display: inline-block;
+  margin: 0 0 0 10px;
+  color: grey
+}
