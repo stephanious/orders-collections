@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 // Application modules
 import { SharedModule } from './shared/shared.module';
+
 import { DashboardModule } from './dashboard/dashboard.module';
 import { CollectionsModule } from './collections/collections.module';
 import { OrdersModule } from './orders/orders.module';

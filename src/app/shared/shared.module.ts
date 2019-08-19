@@ -18,13 +18,18 @@ import {
   MatExpansionModule,
   MatDividerModule,
   MatListModule,
-  MatDialogModule
+  MatDialogModule,
+  MatSelectModule,
+  MatTableModule
 } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { AppRightSidebarComponent } from './components/app-right-sidebar/app-right-sidebar.component';
 import { AppSidebarDraftComponent } from './components/app-sidebar-draft/app-sidebar-draft.component';
 import { AppSidebarPendingDraftComponent } from './components/app-sidebar-pending-draft/app-sidebar-pending-draft.component';
+import { AppBreadcrumbComponent } from './components/app-breadcrumb/app-breadcrumb.component';
+import { AppDropdownComponent } from './components/app-dropdown/app-dropdown.component';
+import { AppSectionHeaderComponent } from './components/app-section-header/app-section-header.component';
 
 
 
@@ -38,6 +43,9 @@ import { AppSidebarPendingDraftComponent } from './components/app-sidebar-pendin
     AppRightSidebarComponent,
     AppSidebarDraftComponent,
     AppSidebarPendingDraftComponent,
+    AppBreadcrumbComponent,
+    AppDropdownComponent,
+    AppSectionHeaderComponent
    ],
   imports: [
     CommonModule,
@@ -52,7 +60,8 @@ import { AppSidebarPendingDraftComponent } from './components/app-sidebar-pendin
     MatExpansionModule,
     MatDividerModule,
     MatListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule
   ],
   exports: [
     AppHeaderComponent,
@@ -61,6 +70,9 @@ import { AppSidebarPendingDraftComponent } from './components/app-sidebar-pendin
     AppInputComponent,
     AppCheckboxComponent,
     AppRightSidebarComponent,
+    AppBreadcrumbComponent,
+    AppDropdownComponent,
+    AppSectionHeaderComponent,
     CommonModule,
     MatButtonModule,
     MatCheckboxModule,
@@ -73,7 +85,8 @@ import { AppSidebarPendingDraftComponent } from './components/app-sidebar-pendin
     MatExpansionModule,
     MatDividerModule,
     MatListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule
   ]
 })
 export class SharedModule { }

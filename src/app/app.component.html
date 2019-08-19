@@ -6,11 +6,12 @@
     <app-header></app-header>
     <div class="sidenav-content-container" layout="row">
       <div class="flex-70" flex="70">
-        <router-outlet></router-outlet>
+        <router-outlet> 
+          <app-breadcrumb></app-breadcrumb>
+        </router-outlet>
       </div>
       <app-right-sidebar></app-right-sidebar>
-      
-    </div>
+     </div>
    </mat-sidenav-content>
 </mat-sidenav-container>
 
