@@ -16,16 +16,28 @@ import {
   MatExpansionModule,
   MatDividerModule,
   MatListModule,
-  MatDialogModule
+  MatDialogModule,
+  MatSelectModule,
+  MatTableModule
 } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { AppBreadcrumbComponent } from './components/app-breadcrumb/app-breadcrumb.component';
+import { AppDropdownComponent } from './components/app-dropdown/app-dropdown.component';
+import { AppSectionHeaderComponent } from './components/app-section-header/app-section-header.component';
+
+
 
 @NgModule({
   declarations: [
     AppTableComponent,
     AppInputComponent,
-    AppCheckboxComponent
-   ],
+    AppCheckboxComponent,
+    AppBreadcrumbComponent,
+    AppDropdownComponent,
+    AppSectionHeaderComponent,
+    
+    ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -38,12 +50,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatExpansionModule,
     MatDividerModule,
     MatListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule,
+    RouterModule
   ],
   exports: [
     AppTableComponent,
     AppInputComponent,
     AppCheckboxComponent,
+    AppBreadcrumbComponent,
+    AppDropdownComponent,
+    AppSectionHeaderComponent,
     CommonModule,
     MatButtonModule,
     MatCheckboxModule,
@@ -55,7 +72,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatExpansionModule,
     MatDividerModule,
     MatListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule,
+    
   ]
 })
 export class SharedModule { }

@@ -14,12 +14,15 @@
 .sidenav-content-container {
   display: flex;
   height: 100%;
+  width: 100%;
   align-items: stretch;
   justify-content: space-between;
   float: right;
 }
 
 .flex-70 {
-  background-color: white;
+  background-color:#EEEEEE;
   border-top: 1px solid grey;
+  width: 100%;
+
 }
