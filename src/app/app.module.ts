@@ -1,3 +1,4 @@
+import { CoreModule } from './core/core.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -15,10 +16,13 @@ import { SharedModule } from './shared/shared.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { CollectionsModule } from './collections/collections.module';
 import { OrdersModule } from './orders/orders.module';
+import { SignInComponent } from './auth/sign-in/sign-in.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,9 @@ import { OrdersModule } from './orders/orders.module';
     HttpClientModule,
     DashboardModule,
     OrdersModule,
-    CollectionsModule
+    CollectionsModule,
+    CoreModule,
+    FormsModule
   ],
   exports: [],
   providers: [],
