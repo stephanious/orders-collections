@@ -9,9 +9,6 @@ import { ErrorHandlerInterceptor } from './interceptors/error-handler.intercepto
 import { FooterComponent } from './footer/footer.component';
 import { AppHeaderComponent } from './header/app-header.component';
 import { AppSidebarComponent } from './left-sidebar/app-sidebar.component';
-import { AppSidebarDraftComponent } from './right-sidebar/components/draft-section/app-sidebar-draft.component';
-import { AppSidebarPendingDraftComponent } from './right-sidebar/components/pending-draft-section/app-sidebar-pending-draft.component';
-import { AppRightSidebarComponent } from './right-sidebar/app-right-sidebar.component';
 import { RouterModule } from '@angular/router';
 import { LoaderComponent } from './loader/loader.component';
 
@@ -20,13 +17,11 @@ import { LoaderComponent } from './loader/loader.component';
     FooterComponent,
     AppHeaderComponent,
     AppSidebarComponent,
-    AppSidebarDraftComponent,
-    AppSidebarPendingDraftComponent,
-    AppRightSidebarComponent,
+    
     LoaderComponent
   ],
   imports: [CommonModule, SharedModule, RouterModule],
-  exports: [AppHeaderComponent, AppSidebarComponent, AppRightSidebarComponent],
+  exports: [AppHeaderComponent, AppSidebarComponent],
   providers: [
     AuthenticationService,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
