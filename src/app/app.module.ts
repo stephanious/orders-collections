@@ -16,13 +16,17 @@ import { SharedModule } from './shared/shared.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { CollectionsModule } from './collections/collections.module';
 import { OrdersModule } from './orders/orders.module';
-import { SignInComponent } from './auth/sign-in/sign-in.component';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from './auth/auth.service';
+import { RegisterComponent } from './auth/register/register.component';
+import { LoginComponent } from './auth/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignInComponent
+    RegisterComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   exports: [],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
