@@ -14,10 +14,10 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
 
-  register(form: NgForm) {
-    alert(form.value.email);
-    const email = form.value.email;
-    const pass = form.value.password;
-    this.authservice.register(email, pass);
-  }
+  // register(form: NgForm) {
+  //   alert(form.value.email);
+  //   const email = form.value.email;
+  //   const pass = form.value.password;
+  //   this.authservice.register(email, pass);
+  // }
 }

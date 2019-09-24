@@ -9,15 +9,17 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authservice: AuthService) { }
+  constructor(public authservice: AuthService) { }
 
   ngOnInit() {
   }
 
-  login(form: NgForm) {
-    const email = form.value.email;
-    const pass = form.value.password;
-    this.authservice.login(email, pass);
+  login() {
+    this.authservice.GoogleAuth();
+  }
+
+  logout() {
+    this.authservice.logout();
   }
 
 }

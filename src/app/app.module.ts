@@ -20,6 +20,10 @@ import { FormsModule } from '@angular/forms';
 import { AuthService } from './auth/auth.service';
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireAuthModule } from "@angular/fire/auth";
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,10 @@ import { LoginComponent } from './auth/login/login.component';
     OrdersModule,
     CollectionsModule,
     CoreModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    AngularFirestoreModule,
   ],
   exports: [],
   providers: [AuthService],

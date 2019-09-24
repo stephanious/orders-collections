@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CollectionsComponent } from './collections.component';
 import { CollectionsRoutingModule } from './collections-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { CoreModule } from '../core/core.module';
 
 
 
@@ -11,7 +12,8 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule,
     CollectionsRoutingModule,
-    SharedModule
+    SharedModule,
+    CoreModule
   ]
 })
 export class CollectionsModule { }
