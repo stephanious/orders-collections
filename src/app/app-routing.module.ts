@@ -1,11 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SignInComponent } from './auth/sign-in/sign-in.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { LoginComponent } from './auth/login/login.component';
 
 
 const routes: Routes = [
+  { 
+    path: '', redirectTo: '/login', pathMatch: 'full' },
   {
-    path: 'signin', component: SignInComponent
+    path: 'register', component: RegisterComponent
+  },
+  {
+    path: 'login', component: LoginComponent
   },
   {
     path: 'collections',
@@ -18,13 +24,7 @@ const routes: Routes = [
   {
     path: 'orders',
     loadChildren: () => import('./orders/orders.module').then(mod => mod.OrdersModule)
-  },
-  {
-    path: '',
-    redirectTo: 'signin',
-    pathMatch: 'full'
-  },
-  // { path: '**', component: PageNotFoundComponent }
+  }
 ];
 
 @NgModule({
